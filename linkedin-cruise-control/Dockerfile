@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:11-jdk-slim
 
 RUN cd /home && git clone https://github.com/linkedin/cruise-control.git && cd cruise-control
 WORKDIR /home/cruise-control
