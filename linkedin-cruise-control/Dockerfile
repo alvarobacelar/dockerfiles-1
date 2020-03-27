@@ -1,6 +1,6 @@
 FROM openjdk:11-jdk-slim
 
-RUN cd /home && git clone https://github.com/linkedin/cruise-control.git && cd cruise-control
+RUN cd /home && apt update && apt install git && git clone https://github.com/linkedin/cruise-control.git && cd cruise-control
 WORKDIR /home/cruise-control
 
 VOLUME ["./config","./logs"]
