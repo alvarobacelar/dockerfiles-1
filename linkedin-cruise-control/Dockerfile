@@ -1,8 +1,6 @@
 FROM openjdk:8-jdk
 
-ARG commit=7715160bb3e832f7e9d1e2c2c89634b6cd64fb6c
-
-RUN cd /home && git clone https://github.com/linkedin/cruise-control.git && cd cruise-control && git checkout ${commit}
+RUN cd /home && git clone https://github.com/linkedin/cruise-control.git && cd cruise-control
 WORKDIR /home/cruise-control
 
 VOLUME ["./config","./logs"]
